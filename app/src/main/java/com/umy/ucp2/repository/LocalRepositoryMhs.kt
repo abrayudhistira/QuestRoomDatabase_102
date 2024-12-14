@@ -23,5 +23,7 @@ class LocalRepositoryMhs (
         mahasiswaDao.deleteMahasiswa(mahasiswa)
     }
 
-    suspend fun updateMhs(mahasiswa: Mahasiswa)
+    override suspend fun updateMhs(mahasiswa: Mahasiswa) {
+        mahasiswaDao.updateMahasiswa(mahasiswa)
+    }
 }
