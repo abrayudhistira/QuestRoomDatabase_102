@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 import com.umy.ucp2.data.entity.Mahasiswa
 import kotlinx.coroutines.flow.Flow
 
@@ -21,3 +22,6 @@ fun getMahasiswa(nim: String) : Flow<Mahasiswa>
 
 @Delete
 suspend fun deleteMahasiswa(mahasiswa: Mahasiswa)
+
+@Update
+suspend fun updateMahasiswa(mahasiswa: Mahasiswa)
