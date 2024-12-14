@@ -1,6 +1,7 @@
 package com.umy.ucp2.data.dao
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.umy.ucp2.data.entity.Mahasiswa
@@ -17,3 +18,6 @@ fun getAllMahasiswa() : Flow<List<Mahasiswa>>
 
 @Query("SELECT * FROM mahasiswa WHERE nim = :nim")
 fun getMahasiswa(nim: String) : Flow<Mahasiswa>
+
+@Delete
+suspend fun deleteMahasiswa(mahasiswa: Mahasiswa)
