@@ -51,3 +51,7 @@ class DetailMhsViewModel (
         }
     }
 }
+
+data class DetailUiState (
+
+)
