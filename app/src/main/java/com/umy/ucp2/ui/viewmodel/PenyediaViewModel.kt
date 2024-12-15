@@ -11,7 +11,7 @@ object PenyediaViewModel {
     val Factory = viewModelFactory {
         initializer {
             MahasiswaViewModel(
-                krsApp().containerApp.repositoryMhs
+                KrsApp().containerApp.repositoryMhs
             )
         }
 
@@ -38,5 +38,5 @@ object PenyediaViewModel {
     }
 }
 
-fun CreationExtras.krsApp(): KrsApp =
+fun CreationExtras.KrsApp(): KrsApp =
     (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as KrsApp)

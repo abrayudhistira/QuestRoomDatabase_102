@@ -20,7 +20,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             UCP2_102Theme {
-                PengelolaHalaman()
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    PengelolaHalaman(modifier = Modifier.padding(innerPadding))
+                }
             }
         }
     }
