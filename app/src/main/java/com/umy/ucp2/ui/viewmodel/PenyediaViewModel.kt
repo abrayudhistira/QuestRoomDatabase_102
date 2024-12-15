@@ -13,6 +13,14 @@ object PenyediaViewModel {
                 krsApp().containerApp.repositoryMhs
             )
         }
+
+        initializer {
+            HomeMhsViewModel(
+                KrsApp().containerApp.repositoryMhs
+            )
+        }
+
+
     }
 }
 
