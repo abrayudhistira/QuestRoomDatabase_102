@@ -1,6 +1,7 @@
 package com.umy.ucp2.ui.viewmodel
 
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.createSavedStateHandle
 import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
@@ -20,6 +21,12 @@ object PenyediaViewModel {
             )
         }
 
+        initializer {
+            DetailMhsViewModel(
+                createSavedStateHandle(),
+                KrsApp().containerApp.repositoryMhs
+            )
+        }
 
     }
 }
